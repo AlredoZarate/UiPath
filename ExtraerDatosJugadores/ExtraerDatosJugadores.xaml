@@ -1,0 +1,456 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtraerDatosJugadores" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,3674" sap2010:WorkflowViewState.IdRef="ExtraerDatosJugadores_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Azure.Models</x:String>
+      <x:String>UiPath.Azure.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Azure</AssemblyReference>
+      <AssemblyReference>UiPath.Azure.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExtraerDatosJugadores" sap:VirtualizedContainerService.HintSize="592,3609" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="equipos" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tablaDePosiciones" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Fichajes de fútbol, rumores, valores d" sap:VirtualizedContainerService.HintSize="530,2460" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2211" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="equipo" />
+              <Variable x:TypeArguments="x:String" Name="test2" />
+              <Variable x:TypeArguments="x:String" Name="variable1" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[equipo]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Pumas UNAM</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Escribir equipo en campo de busqueda" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Text="[equipo + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/schnellsuche/ergebnis/schnellsuche?query=CF+Am%C3%A9rica" CVScreenId="41266988-9d8f-4c15-b10b-0b39924e8815" ContentHash="-h2XX__b60my7yWX_PWHww" CvTextArea="651, 139, 80, 15" CvTextArgument="CF America" CvType="Text" DesignTimeRectangle="641, 127, 389, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='tm-header__input--search-field' placeholder='Introducir término (p.ej. jugador, club,...)' aaname='' /&gt;" Guid="bd11f283-addd-4dcb-8a65-6498db55834b" InformativeScreenshot="3bd2fb7723f0eb2133fe715b929c4676.png" Reference="zAaSPdMDGEaN-fAMCbc0Ug/kpnDuWd70k-93g9WmCcCrg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='Resultado de búsqueda | Transfermarkt' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Equipo" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/schnellsuche/ergebnis/schnellsuche?query=CF+Am%C3%A9rica" CVScreenId="fb082936-3998-447d-a317-8389c8158327" CvTextArea="366, 569, 60, 12" CvTextArgument="CF America" CvType="Text" DesignTimeRectangle="1073, 576, 15, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='{0}' check:innerText='' /&gt;&quot;, equipo)]" Guid="b803ed38-28b6-460f-be85-4c55b5e7ac0a" InformativeScreenshot="0451c5f8c38a0163550bd4c0b0e6c7cc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resultado de búsqueda | Transfermarkt' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="fb082936-3998-447d-a317-8389c8158327" CvElementArea="597, 574, 22, 17" CvTextArea="601, 576, 12, 12" CvType="Icon" DesignTimeRectangle="1264, 578, 20, 14" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='flaggenrahmen' tableRow='2' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='flaggenrahmen' type='' tag='IMG' aaname='México' /&gt;" Guid="f65df42f-b846-4b87-a7c4-79e6e01573cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAPCAYAAAALWoRrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVDhPY/hPA0BbQyMiIinGMIBiKEOx6X+GPHsITrP8z1AZBZVFBVfUbf9fZFAEYiUwvsogj8dQkGEZ7hCcYPOfDWrov3//EBjIv6xh9/8st9L/c4JqYAwymHRDgfjl/Wv/f377Sj1DXz46/T+fgeF/X6YfmE+RoQy5nv8/fXj2/+Dhtf97Uq3/L+1r+f8eyKfM0JKg/79/ff1/8PKh/40zav7vOrXj/4+fX6jj/b///gBd/Pb/37+/qRhRFMU+LdIppRgG4IZSE9DA0P//AVO3tYf6vGyjAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Vista general'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/cf-america/startseite/verein/3631/saison_id/2024" CVScreenId="bbb02337-c19d-4048-a345-fc2209da2cb6" CvTextArea="290, 808, 96, 15" CvTextArgument="VISTA GENERAL" CvType="Text" DesignTimeRectangle="290, 786, 100, 60" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='3631' tag='TM-SUBNAVIGATION' /&gt;&lt;webctrl shadowhostid='3631' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='*' tag='TM-SUBNAVIGATION' /&gt;&lt;webctrl shadowhostid='*' tag='A' type='' class='svelte-1a4ud6h' aaname='Vista general' check:innerText='VISTA GENERAL' /&gt;" Guid="30aea46a-89e8-4312-b5d1-c743fbb207f6" InformativeScreenshot="1dd4e0356151eb8a02ccbcb360ba5c7b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='CF América - Perfil del club | Transfermarkt' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NHover DisplayName="Hover 'Clasificación completa'" sap:VirtualizedContainerService.HintSize="434,225" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_3" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/cf-america/startseite/verein/3631/saison_id/2024" CVScreenId="d4275624-830f-4930-b392-db9df32ec12c" CvElementArea="1288, 606, 17, 19" CvTextArea="1144, 607, 140, 17" CvTextArgument="Clasificacion completa" CvType="ArrowButton" DesignTimeRectangle="978, 596, 333, 38" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Clasificación completa' class='content-link' parentid='tm-main' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Clasificación completa' class='content-link' parentid='tm-main' tag='A' type='' check:innerText='Clasificación completa' /&gt;" Guid="8f69cd1e-8bd1-4cba-81c2-aa10d1c6b747" InformativeScreenshot="459756a24c5ac2bde60e91d7635d8093.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='CF América - Perfil del club | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NHover.Target>
+              <uix:NHover.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NHover.VerifyOptions>
+            </uix:NHover>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clasificación completa'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/cf-america/startseite/verein/3631/saison_id/2024" CVScreenId="8ee2102d-0e93-4791-8d0b-8a7bcc07aec2" CvElementArea="1288, 580, 17, 19" CvTextArea="1144, 581, 140, 17" CvTextArgument="Clasificacion completa" CvType="ArrowButton" DesignTimeRectangle="978, 570, 333, 38" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Clasificación completa' class='content-link' parentid='tm-main' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Clasificación completa' class='content-link' parentid='tm-main' tag='A' type='' check:innerText='Clasificación completa' /&gt;" Guid="4a7496a0-8693-48d1-8599-30245407b222" InformativeScreenshot="e502864a1fdaf9ffb3c5c63f3e8211c7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='CF América - Perfil del club | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NHover DisplayName="Hover 'Seleccionar temporada'" sap:VirtualizedContainerService.HintSize="434,225" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_4" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/liga-mx-apertura/tabelle/wettbewerb/MEXA/saison_id/2024" CVScreenId="7ebab2ca-d9d5-4fc7-9eb1-f0f8f19cda1b" CvTextArea="301, 435, 127, 14" CvTextArgument="Seleccionar temporada:" CvType="Text" DesignTimeRectangle="299, 429, 312, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Seleccionar temporada:' check:innerText='Seleccionar temporada:' /&gt;" Guid="20b4dc6d-9b32-4073-8a85-09b5e4156585" InformativeScreenshot="2429023841b5f1aabffbac6a3462572a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='Liga MX Apertura - Clasificación | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NHover.Target>
+              <uix:NHover.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NHover.VerifyOptions>
+            </uix:NHover>
+            <uix:NSelectItem DisplayName="Select Item '24/25'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="22/23" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="29">
+                  <x:String>24/25</x:String>
+                  <x:String>23/24</x:String>
+                  <x:String>22/23</x:String>
+                  <x:String>21/22</x:String>
+                  <x:String>20/21</x:String>
+                  <x:String>19/20</x:String>
+                  <x:String>18/19</x:String>
+                  <x:String>17/18</x:String>
+                  <x:String>16/17</x:String>
+                  <x:String>15/16</x:String>
+                  <x:String>14/15</x:String>
+                  <x:String>13/14</x:String>
+                  <x:String>12/13</x:String>
+                  <x:String>11/12</x:String>
+                  <x:String>10/11</x:String>
+                  <x:String>09/10</x:String>
+                  <x:String>08/09</x:String>
+                  <x:String>07/08</x:String>
+                  <x:String>06/07</x:String>
+                  <x:String>05/06</x:String>
+                  <x:String>04/05</x:String>
+                  <x:String>03/04</x:String>
+                  <x:String>02/03</x:String>
+                  <x:String>01/02</x:String>
+                  <x:String>00/01</x:String>
+                  <x:String>99/00</x:String>
+                  <x:String>98/99</x:String>
+                  <x:String>97/98</x:String>
+                  <x:String>96/97</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/liga-mx-apertura/tabelle/wettbewerb/MEXA/saison_id/2024" CVScreenId="e5035b3d-b1f5-433a-a245-28fb818b487c" CvElementArea="613, 468, 169, 28" CvType="InputBox" DesignTimeRectangle="614, 469, 167, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='chzn-single' aaname='*' /&gt;" Guid="a082be57-73bb-4c85-854e-82c00b56d29b" ImageBase64="" InformativeScreenshot="98091ffe031d2a9e9c6ab314ff4229da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='Liga MX Apertura - Clasificación | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="e5035b3d-b1f5-433a-a245-28fb818b487c" CvTextArea="301, 471, 127, 14" CvTextArgument="Seleccionar temporada:" CvType="Text" DesignTimeRectangle="299, 465, 312, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Seleccionar temporada:' check:innerText='Seleccionar temporada:' /&gt;" Guid="e2e36db0-56b0-463c-9240-c507cd36e078" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mostrar'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/liga-mx-apertura/tabelle/wettbewerb/MEXA/saison_id/2024" CVScreenId="2afda5f9-2dbb-48b2-b357-92273f2249e8" CvElementArea="787, 468, 68, 28" CvTextArea="800, 477, 41, 10" CvTextArgument="Mostrar" CvType="Button" DesignTimeRectangle="787, 469, 67, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='small button' tag='INPUT' type='submit' aaname='Mostrar' check:text='Mostrar' /&gt;" Guid="da55ce0f-74d4-44d0-9b08-fabe419d865b" InformativeScreenshot="8b6b7133c4ec7d48c03a35f95227b7f0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='Liga MX Apertura - Clasificación | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[tablaDePosiciones]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='#' ReferenceIdx='0' Name='#'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Club' ReferenceIdx='1' Name='Club'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Club1' ReferenceIdx='2' Name='Club1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-3' ReferenceIdx='3' Name='Column-3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='G' ReferenceIdx='4' Name='G'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='E' ReferenceIdx='5' Name='E'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='P' ReferenceIdx='6' Name='P'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Goles' ReferenceIdx='7' Name='Goles'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='+/-' ReferenceIdx='8' Name='+/-'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Pto.' ReferenceIdx='9' Name='Pto.'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='#' attr='fulltext' /&gt;&lt;column name='Club' attr='fulltext' /&gt;&lt;column name='Club' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;column name='G' attr='fulltext' /&gt;&lt;column name='E' attr='fulltext' /&gt;&lt;column name='P' attr='fulltext' /&gt;&lt;column name='Goles' attr='fulltext' /&gt;&lt;column name='+/-' attr='fulltext' /&gt;&lt;column name='Pto.' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="ebaddf8f-21e4-47c5-b732-867d9f530b7c" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/liga-mx-apertura/tabelle/wettbewerb/MEXA/saison_id/2024" DesignTimeRectangle="289, 499, 677, 539" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='yw1' tag='TABLE' /&gt;" Guid="bd308e35-11bc-4eeb-bd76-757c5b9cf17b" InformativeScreenshot="bd87d1f5435ac44e3a9c396dc822259d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='Ukyv4JHc' title='Liga MX Apertura - Clasificación | Transfermarkt' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" ContentHash="--7HbGDJJUG7pJBW0HCfjQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC61BMVEUTGrcSGq0RGaQPGZwOGJQNGIwNF4UMF34LF3gKFnIJFmwJFmcIFWIIFV0HFVkGFVURGqsQGaMPGZoOGJINGIsMF4QMF30LF3YKFnAJFmsJFmYIFWEHFVwHFVgGFVQGFFAQGaEPGZkOGJENGIkMF4ILF3wLF3UKFm8JFmoIFmUIFWAHFVsHFVcGFVMGFFAFFE0PGZcOGI8NGIgMF4ELF3oKFnQKFm4JFmkIFmQIFV8HFVoHFVYGFVMGFE8FFEwFFEkOGI4NGIYMF4ALF3kKFnMKFm0JFmgIFWMIFV4HFVoHFVYGFFIGFE8FFEsFFEkFFEYNGIUMF34LF3gUH3dnb6UeKnQIFWIIFV0HFVkHFVUGFFEGFE4FFEsFFEgFFEYEFEMMF30LF3cbJnuorcz///9yeqUYJWgpNW9PWYZQWoUVI1gsOWdTXYEcKlYEFEMEE0ELF3UKFnApNH38/P3X2eVEToOqr8b8/P2rsMP5+fr29viyt8aZn7IEE0EEEz8KFm4JFmk+SYZcZZIZJmP4+fqbobgPHVPz9PeOlawuO2RcZoMEEz8EEz4JFmgIFWOVm7t1faFweJz+/v40QG1faItCTnKQl6zv8PMNHEYEEz0DEzwIFWIIFV0rN3FjbJQyPnA2QXBIU3sFFEgvPGVVYIAFFEI2QmY9SGoEEz0DEzwDEzsHFVwHFVgGFVQGFFEGFE0FFEoFFEgFFEUEFEMEE0EEE0AEEz4DEz0DEzwDEzsDEzoHFVcGFVQGFFAFFE0FFEoFFEcEFEUEFEMEE0EEEz8EEz4DEz0DEzwDEzsDEzoDEzoGFVMGFE8FFEwFFEkFFEcEFEQEFEIEE0EEEz8EEz4DEzwDEzsDEzsDEzoDEzoDEzkGFE8FFEwFFEkFFEYEFEQEFEIEE0AEEz8EEz0DEzwDEzsDEzsDEzoDEzoDEzkDEzkFFEsFFEgFFEYEFEQEFEIEE0AEEz4EEz0DEzwDEzsDEzoDEzoDEzoDEzkzAXKZAAAAB3RJTUUH5goYDgMuLrFG6AAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEbSURBVChTARAB7/4AAAECAwQFBgcICQoLDA0ODwAQERITFBUWFxgZGhscHR4fACAhIiMkJSYnKCkqKywtLi8AMDEyMzQ1Njc4OTo7PD0+PwBAQUJDREVGR0hJSktMTU5PAFBRUlNUVVZXWFlaW1xdXl8AYGFiY2RlZmdoaWprbG1ubwBwcXJzdHV2d3h5entkfH1+AH+AgWSCg4SFhoeIiWSKi4wAjY6PZJCRkpOUZJWWl5iZmgCbnJ2en6ChoqOkpaanqKmqAKusra6vsLGys7S1tre4uboAu7y9vr/AwcLDxMXGx8jJygDLzM3Oz9DR0tPU1dbX2NnaANvc3d7f4OHi4+Tl5ufo6eoA6+zt7u/w8fLz9PX29/jq6jHxfGU0TXOBAAAAAElFTkSuQmCC" InformativeScreenshot="1fb64fa2440553a68f86e436c34548d9.jpg" Reference="zAaSPdMDGEaN-fAMCbc0Ug/NsI18l7IgkC4mWZCeaqV7w" Selector="&lt;html app='chrome.exe' htmlwindowname='o4mFPLQS' title='Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermarkt' /&gt;" Title="Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermarkt" Url="https://www.transfermarkt.mx/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="530,113" sap2010:WorkflowViewState.IdRef="SequenceX_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="450,451" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="Estadisticas.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelGetWorkbookSheets DisplayName="Get Workbook Sheets" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheets_1" Sheets="[equipos]" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelApplicationCard>
+    </ueab:SequenceX>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="530,948" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[equipos]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,811" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="copiaTablaDePosiciones" />
+              <Variable x:TypeArguments="sd:DataTable" Name="tablaDePosicionesFiltrada" />
+              <Variable x:TypeArguments="x:String" Name="equipoActual" />
+              <Variable x:TypeArguments="x:Int32" Name="indexLookUp" />
+              <Variable x:TypeArguments="x:String" Name="test" />
+              <Variable x:TypeArguments="sd:DataTable" Name="tablaDeResultados" />
+              <Variable x:TypeArguments="sd:DataTable" Name="testDT" />
+              <Variable x:TypeArguments="x:String" Name="test3" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[equipoActual]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentText]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[copiaTablaDePosiciones]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[tablaDePosiciones]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:FilterDataTable DataTable="[copiaTablaDePosiciones]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[tablaDePosicionesFiltrada]" SelectColumnsMode="Keep">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[5]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[6]</InArgument>
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[tablaDePosicionesFiltrada]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupValue="[equipoActual]" RowIndex="[indexLookUp]">
+              <ui:LookupDataTable.LookupColumnIndex>
+                <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                  <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+                </InArgument>
+              </ui:LookupDataTable.LookupColumnIndex>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LookupDataTable>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[tablaDePosicionesFiltrada(indexLookUp)(0)]" />
+            <ui:ClearDataTable DataTable="[tablaDePosicionesFiltrada]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="434,103" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
