@@ -1,0 +1,171 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Abrir_Navegador" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_SystemException" Type="OutArgument(s:SystemException)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1148,1481</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Abrir_Navegador_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Abrir_Navegador" sap:VirtualizedContainerService.HintSize="1158,1416" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="1096,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Inicia Abrirr Navegador&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Utilizar Navegador Chrome: Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermark" sap:VirtualizedContainerService.HintSize="1096,991" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="00b57a6e-bcd4-4d6b-a14c-8b755f348eb6" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1062,742" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Comprobar estado de aplicación 'Descubre'" sap:VirtualizedContainerService.HintSize="1000,652" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="00b57a6e-bcd4-4d6b-a14c-8b755f348eb6" Timeout="30" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="388,168" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Pagina abierta correctamente&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="496,370" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Fatal" Message="[&quot;Error al intentar abrir la pagina&quot;]" />
+                  <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:SystemException">[out_SystemException]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:SystemException">[New SystemException("Error al iniciar el navegador")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.transfermarkt.mx/" CVScreenId="4293caee-4c5e-4580-9812-a84382aa4b1e" CvTextArea="303, 222, 73, 13" CvTextArgument="DESCUBRE" CvType="Text" DesignTimeRectangle="305, 222, 71, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                         Descubre                    ' parentid='main' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                         Descubre                    ' parentid='main' tag='A' type='' class='main-navbar__lp-link active' check:innerText='DESCUBRE' /&gt;" Guid="69ea2090-e54f-4d32-a9a3-22a39abf7a97" InformativeScreenshot="8d5448eda1515d3065d2042b1b62ff0e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='WZchDlc8' title='Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermarkt' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC61BMVEUTGrcSGq0RGaQPGZwOGJQNGIwNF4UMF34LF3gKFnIJFmwJFmcIFWIIFV0HFVkGFVURGqsQGaMPGZoOGJINGIsMF4QMF30LF3YKFnAJFmsJFmYIFWEHFVwHFVgGFVQGFFAQGaEPGZkOGJENGIkMF4ILF3wLF3UKFm8JFmoIFmUIFWAHFVsHFVcGFVMGFFAFFE0PGZcOGI8NGIgMF4ELF3oKFnQKFm4JFmkIFmQIFV8HFVoHFVYGFVMGFE8FFEwFFEkOGI4NGIYMF4ALF3kKFnMKFm0JFmgIFWMIFV4HFVoHFVYGFFIGFE8FFEsFFEkFFEYNGIUMF34LF3gUH3dnb6UeKnQIFWIIFV0HFVkHFVUGFFEGFE4FFEsFFEgFFEYEFEMMF30LF3cbJnuorcz///9yeqUYJWgpNW9PWYZQWoUVI1gsOWdTXYEcKlYEFEMEE0ELF3UKFnApNH38/P3X2eVEToOqr8b8/P2rsMP5+fr29viyt8aZn7IEE0EEEz8KFm4JFmk+SYZcZZIZJmP4+fqbobgPHVPz9PeOlawuO2RcZoMEEz8EEz4JFmgIFWOVm7t1faFweJz+/v40QG1faItCTnKQl6zv8PMNHEYEEz0DEzwIFWIIFV0rN3FjbJQyPnA2QXBIU3sFFEgvPGVVYIAFFEI2QmY9SGoEEz0DEzwDEzsHFVwHFVgGFVQGFFEGFE0FFEoFFEgFFEUEFEMEE0EEE0AEEz4DEz0DEzwDEzsDEzoHFVcGFVQGFFAFFE0FFEoFFEcEFEUEFEMEE0EEEz8EEz4DEz0DEzwDEzsDEzoDEzoGFVMGFE8FFEwFFEkFFEcEFEQEFEIEE0EEEz8EEz4DEzwDEzsDEzsDEzoDEzoDEzkGFE8FFEwFFEkFFEYEFEQEFEIEE0AEEz8EEz0DEzwDEzsDEzsDEzoDEzoDEzkDEzkFFEsFFEgFFEYEFEQEFEIEE0AEEz4EEz0DEzwDEzsDEzoDEzoDEzoDEzkzAXKZAAAAB3RJTUUH5goYDgMuLrFG6AAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEbSURBVChTARAB7/4AAAECAwQFBgcICQoLDA0ODwAQERITFBUWFxgZGhscHR4fACAhIiMkJSYnKCkqKywtLi8AMDEyMzQ1Njc4OTo7PD0+PwBAQUJDREVGR0hJSktMTU5PAFBRUlNUVVZXWFlaW1xdXl8AYGFiY2RlZmdoaWprbG1ubwBwcXJzdHV2d3h5entkfH1+AH+AgWSCg4SFhoeIiWSKi4wAjY6PZJCRkpOUZJWWl5iZmgCbnJ2en6ChoqOkpaanqKmqAKusra6vsLGys7S1tre4uboAu7y9vr/AwcLDxMXGx8jJygDLzM3Oz9DR0tPU1dbX2NnaANvc3d7f4OHi4+Tl5ufo6eoA6+zt7u/w8fLz9PX29/jq6jHxfGU0TXOBAAAAAElFTkSuQmCC" InformativeScreenshot="4ed327ce5787b0139e1569578c30bd52.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='WZchDlc8' title='Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermarkt' /&gt;" Title="Fichajes de fútbol, rumores, valores de mercado y noticias | Transfermarkt" Url="https://www.transfermarkt.mx/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="1096,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Termina Abrir Navegador&quot;]" />
+  </Sequence>
+</Activity>
